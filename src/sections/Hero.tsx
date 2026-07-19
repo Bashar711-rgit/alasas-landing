@@ -166,7 +166,7 @@ export function Hero() {
 
             <div className="mt-8 flex items-end justify-between gap-6">
               <div className="animate-float-slow shrink-0">
-                <img src={logo} alt="منصة الأسس" className="w-32 mix-blend-multiply sm:w-36" />
+                <img src={logo} alt="منصة أبشر" className="w-32 mix-blend-multiply sm:w-36" />
               </div>
               <div className="rounded-2xl border-2 border-dashed border-[#0B3D2E]/15 bg-[#F6F9F1] p-3 text-center">
                 <img src={qr} alt="رمز واتساب" className="w-24 mix-blend-multiply sm:w-28" />
