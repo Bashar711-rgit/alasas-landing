@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 152 68% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 152 68% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 152 68% 14%;
+    --primary: 152 68% 14%;
+    --primary-foreground: 74 76% 61%;
+    --secondary: 74 76% 61%;
+    --secondary-foreground: 152 68% 14%;
+    --muted: 90 20% 96%;
+    --muted-foreground: 150 12% 38%;
+    --accent: 74 76% 61%;
+    --accent-foreground: 152 68% 14%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 120 12% 90%;
+    --input: 120 12% 90%;
+    --ring: 152 68% 14%;
+    --radius: 1rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#F6F9F1] text-[#0B3D2E] antialiased;
+    font-family: 'Tajawal', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #cde94f;
+    color: #0b3d2e;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* شبكة نقاط خفيفة */
+  .bg-dots {
+    background-image: radial-gradient(rgba(11, 61, 46, 0.10) 1.2px, transparent 1.2px);
+    background-size: 26px 26px;
+  }
+
+  .bg-grid-fade {
+    background-image:
+      linear-gradient(to left, rgba(11, 61, 46, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(11, 61, 46, 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 30%, transparent 75%);
+  }
+
+  /* شريط متحرك */
+  @keyframes marquee-x {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee-x 28s linear infinite;
+  }
+
+  /* طفو ناعم */
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+  .animate-float {
+    animation: float-y 5s ease-in-out infinite;
+  }
+  .animate-float-slow {
+    animation: float-y 7.5s ease-in-out infinite;
+  }
+
+  /* فقاعات خلفية */
+  @keyframes blob-shift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(28px, -36px) scale(1.08); }
+    66% { transform: translate(-22px, 18px) scale(0.95); }
+  }
+  .animate-blob {
+    animation: blob-shift 12s ease-in-out infinite;
+  }
+
+  /* نبض واتساب */
+  @keyframes ring-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(30, 122, 75, 0.45); }
+    70% { box-shadow: 0 0 0 18px rgba(30, 122, 75, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(30, 122, 75, 0); }
+  }
+  .animate-ring {
+    animation: ring-pulse 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* لمعة على البطاقة */
+  @keyframes sheen {
+    0% { transform: translateX(-120%) skewX(-18deg); }
+    100% { transform: translateX(240%) skewX(-18deg); }
+  }
+  .group-sheen:hover .sheen-bar {
+    animation: sheen 0.9s ease;
+  }
+}
