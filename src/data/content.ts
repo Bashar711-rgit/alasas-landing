@@ -14,12 +14,12 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 
-export const BRAND = 'منصة الأسس'
+export const BRAND = 'منصة أبشر'
 export const BRAND_EN = 'STUDENTS HELP'
 export const PHONE_DISPLAY = '+966 57 856 8011'
 export const PHONE_INTL = '966578568011'
 export const WA_LINK = `https://wa.me/${PHONE_INTL}?text=${encodeURIComponent(
-  'مرحبًا، أود الاستفسار عن خدمات منصة الأسس'
+  'مرحبًا، أود الاستفسار عن خدمات منصة أبشر'
 )}`
 
 export interface Service {

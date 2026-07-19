@@ -45,7 +45,7 @@ export function CtaSection() {
               </div>
 
               <div className="mx-auto rounded-3xl bg-white p-5 text-center shadow-2xl transition-transform duration-500 hover:scale-105 hover:-rotate-1">
-                <img src={qr} alt="رمز واتساب منصة الأسس" className="w-40 mix-blend-multiply sm:w-44" />
+                <img src={qr} alt="رمز واتساب منصة أبشر" className="w-40 mix-blend-multiply sm:w-44" />
                 <p className="mt-3 flex items-center justify-center gap-1.5 text-xs font-bold text-[#0B3D2E]/60">
                   <ScanLine className="h-4 w-4" />
                   امسح للتواصل الفوري
